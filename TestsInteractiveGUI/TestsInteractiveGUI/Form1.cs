@@ -24,13 +24,21 @@ namespace TestsInteractiveGUI
             decimal test3;
             decimal test4;
             decimal test5;
-            decimal 
+            decimal total;
+            decimal mean;
+            decimal roundedMean;
 
             test1 = Convert.ToDecimal(txtScore1.Text);
             test2 = Convert.ToDecimal(txtScore2.Text);
             test3 = Convert.ToDecimal(txtScore3.Text);
             test4 = Convert.ToDecimal(txtScore4.Text);
             test5 = Convert.ToDecimal(txtScore5.Text);
+
+            total = test1 + test2 + test3 + test4 + test5;
+            mean = total / 5;
+            roundedMean = Math.Round(mean, 2);
+
+            lblAverage.Text = "Your average test score is " + roundedMean;
 
 
         }
